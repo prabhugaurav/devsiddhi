@@ -151,6 +151,57 @@ $(window).on("load", function () {
       new WOW.WOW().init();
     }
   }
+  
+  var btnVideoChnage = $(".btn-videoChnage");
+  var videoDesc = $(".video-desc");
+  $(btnVideoChnage).on('click',function(){
+    videoDesc.addClass("fadeInLeft");
+  });
+  setTimeout(function () {;
+    videoDesc.addClass("fadeInUp");
+    videoDesc.removeClass("d-none");
+  }, 1500);
+
+  var btnMuteOne = $(".btn-muteOne"), btnMuteTwo = $(".btn-muteTwo");
+  var btnFaVolxmark = $(".fa-volume-xmark"), btnFaVolhigh = $(".fa-volume-high");
+  var videoOneClas  = $(".videoOne"), videoTwoClas  = $(".videoTwo");
+  var btnVideoChnageOne = $("#collapseVideoOne .btn-videoChnage");
+  var btnVideoChnageTwo = $("#collapseVideoTwo .btn-videoChnage");
+  var isMuted = videoOneClas.prop('muted');
+  // console.log(isMuted);
+  $(btnMuteOne).on('click',function(){
+    if (videoOneClas.prop('muted')) {
+      videoOneClas.prop('muted', false);
+      btnMuteOne.find(btnFaVolxmark).addClass("d-none");
+      btnMuteOne.find(btnFaVolhigh).removeClass("d-none");
+    } else {
+      videoOneClas.prop('muted', true);
+      btnMuteOne.find(btnFaVolxmark).removeClass("d-none");
+      btnMuteOne.find(btnFaVolhigh).addClass("d-none");
+    }
+  });
+  $(btnMuteTwo).on('click',function(){
+    if (videoTwoClas.prop('muted')) {
+      videoTwoClas.prop('muted', false);
+      btnMuteTwo.find(btnFaVolxmark).addClass("d-none");
+      btnMuteTwo.find(btnFaVolhigh).removeClass("d-none");
+    } else {
+      videoTwoClas.prop('muted', true);
+      btnMuteTwo.find(btnFaVolxmark).removeClass("d-none");
+      btnMuteTwo.find(btnFaVolhigh).addClass("d-none");
+    }
+  });
+  $(btnVideoChnageOne).on('click',function(){
+    videoOneClas.prop('muted', true);
+    btnMuteOne.find(btnFaVolxmark).removeClass("d-none");
+    btnMuteOne.find(btnFaVolhigh).addClass("d-none");
+  });
+  $(btnVideoChnageTwo).on('click',function(){
+    videoTwoClas.prop('muted', true);
+    btnMuteTwo.find(btnFaVolxmark).removeClass("d-none");
+    btnMuteTwo.find(btnFaVolhigh).addClass("d-none");
+  });
+
 });
 
 $(document).ready(function () {
@@ -270,4 +321,5 @@ $(document).ready(function () {
       });
     }
   });
+
 });

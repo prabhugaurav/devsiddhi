@@ -10,9 +10,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Livvic:wght@100;200;300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/devicon.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/devicon.min.css" />
   <link rel="stylesheet" href="assets/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/plugin/animate/animate.min.css" />
   <link rel="stylesheet" href="assets/plugin/wowjs/css/libs/animate.css" />
@@ -29,6 +29,9 @@
   <div class="page-content">
     <header>
       <div class="header-inner hide-mobile">
+        <div class="logo">
+          <img src="assets/img/Devsiddhi-Logo.png" alt="" class="img-fluid">
+        </div>
         <div class="menu">
           <nav>
             <ul>
@@ -63,20 +66,57 @@
 
         <section class="hori-section first-section home" id="home">
           <div class="hori-flex-column flex-column-mobile">
-                <div class="position-relative animated-video-layer video-animation fadeInUp wow">
-                  <video class="w-full h-full object-cover block" playsinline="" loop="true" autoplay="true" muted="">
-                    <source src="assets/video/webFelicia+WalkThrough.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                  </video>
-                  <video class="w-full h-full object-cover d-none" playsinline="" loop="true" muted="">
-                    <source src="https://devsiddhi-eight.vercel.app/videos/fableweb.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                  </video>
+                <div class="position-relative animated-video-layer video-animation fadeInUp wow" id="accordionVideoLayer">
+
+                      <div class="video-ratio video-16x9 collapse show" data-bs-parent="#accordionVideoLayer" id="collapseVideoOne">
+                        <div class="video-overlay"></div>
+                        <div class="video-desc animated d-none">
+                          <img src="assets/img/logos/FeliciaLogo.png" alt="" class="img-fluid">
+                          <h6>The Timeless Masterpiece</h6>
+                          <p>A Rare Jewel, Hidden in Time's Embrace</p>
+                          <button class="btn btn-videoChnage collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseVideoTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseVideoTwo"> Show <i class="fa-classic fa-solid fa-arrow-right fa-fw"></i> </button>
+                        </div>
+                        <button id="" class="btn btn-mute btn-muteOne">
+                          <i class="fa-solid fa-volume-xmark"></i>
+                          <i class="fa-solid fa-volume-high d-none"></i>
+                        </button>
+                        <video class="w-full h-full object-cover videoOne" playsinline="" loop="true" autoplay="true" muted="">
+                          <source src="assets/video/webFelicia+WalkThrough.webm" type="video/webm"> Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <div class="video-ratio video-16x9 collapse" data-bs-parent="#accordionVideoLayer" id="collapseVideoTwo">
+                        <div class="video-overlay"></div>
+                        <div class="video-desc animated d-none">
+                          <img src="assets/img/logos/Fable-Logo.png" alt="" class="img-fluid">
+                          <h6>An Architecture Marvel. <br> A statement of excellence.</h6>
+                          <p></p>
+                          <button class="btn btn-videoChnage collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseVideoOne"
+                            aria-expanded="true"
+                            aria-controls="collapseVideoOne"> Show <i class="fa-classic fa-solid fa-arrow-right fa-fw"></i> </button>
+                        </div>
+                        <button id="" class="btn btn-mute btn-muteTwo">
+                          <i class="fa-solid fa-volume-xmark"></i>
+                          <i class="fa-solid fa-volume-high d-none"></i>
+                        </button>
+                        <video class="w-full h-full object-cover videoTwo" playsinline="" loop="true" autoplay="true" muted="">
+                          <source src="assets/video/fableweb.webm" type="video/webm"> Your browser does not support the video tag.
+                        </video>
+                      </div>
+
+
                 </div>
           </div>
         </section>
 
-        <section class="hori-section second-section about" id="about" style="background-image: url(assets/img/backgrounds/BG-Pattern.png);background-size: contain;">
+        <section class="hori-section second-section about" id="about" style="background-image: url(assets/img/backgrounds/BG-Pattern.png);background-size: 26%;">
           <div class="hori-flex-column flex-column-mobile">
                 <div class="info flex-column-mobile">
                   <div class="my-photo-container img-container image-animation animated-layer fadeInUp wow" data-wow-offset={200} id="my-photo">
@@ -115,14 +155,15 @@
                       <div class="quote-container animated-layer fade-in-right-animation fadeInUp wow">
                           <div class="dire-card clearfix">
                             <div class="dire-img">
-                              <img src="assets/img/directors/navnath.png" alt="">
+                              <img src="assets/img/directors/hiren-soni.png" alt="">
                             </div>
                             <div class="dire-body">
                               <h5 class="card-title">Hiren Soni</h5>
-                              <p class="card-des">Managing Director</p>
+                              <p class="card-des">Visionary Director, Devsiddhi Group</p>
                               <div class="card-text">
-                                <p>As Managing Director, I lead with vision and strategy, overseeing operations and driving growth across all business verticals.</p>
-                                <p>With a commitment to innovation and excellence, I ensure our team delivers exceptional value to clients.</p>
+                                <p>Every project is a statement of Elegance, Quality and Enduring value. That is the legacy I strive to build.</p>
+                                <!-- <p>With a commitment to innovation and excellence, I ensure our team delivers exceptional value to clients.</p> -->
+                                 <img src="assets/img/hiren-soni-text.png" alt="" class="img-fluid person-text">
                               </div>
                             </div>
                           </div>
@@ -130,14 +171,14 @@
                       <div class="quote-container animated-layer fade-in-right-animation fadeInUp wow">
                           <div class="dire-card clearfix">
                             <div class="dire-img">
-                              <img src="assets/img/directors/download-2.png" alt="">
+                              <img src="assets/img/directors/vijay-soni.png" alt="">
                             </div>
                             <div class="dire-body">
                               <h5 class="card-title">Vijay Soni</h5>
-                              <p class="card-des">Managing Director</p>
+                              <p class="card-des">Director, Devsiddhi Group</p>
                               <div class="card-text">
-                                <p>As Managing Director, I lead with vision and strategy, overseeing operations and driving growth across all business verticals.</p>
-                                <p>With a commitment to innovation and excellence, I ensure our team delivers exceptional value to clients.</p>
+                                <p>I see real estate as a canvas to design Lifestyle, Comfort and Prestige for generations to come.</p>
+                                 <img src="assets/img/vijay-soni-text.png" alt="" class="img-fluid person-text">
                               </div>
                             </div>
                           </div>
@@ -153,7 +194,7 @@
               <span class="animated-layer fade-in-left-animation wow animated fadeInLeft"> Achievements </span>
             </h3>
           </div>
-          <div class="flex-column-mobile">
+          <div class="flex-column-mobile align-items-center margin-align-center" style="left: -5%;">
             <div class="animated-layer fade-in-right-animation fadeInLeft wow" data-wow-offset={200}>
               <div>
                 <div>
@@ -681,7 +722,7 @@
         <img alt="" class="separator-mobile-up hide-desktop z-1 mCS_img_loaded"
           src="assets/img/separator-mobile-up.png">
 
-        <section class="contact main-section flex-column-mobile" id="contact">
+        <section class="contact main-section flex-column-mobile" id="contact" style="background-image: url(assets/img/backgrounds/BG-Pattern.png);background-size: 55%;">
           <div class="custom-title">
             <h3>
               <span>
@@ -691,7 +732,7 @@
               </span>
             </h3>
           </div>
-          <div class="boxes">
+          <div class="boxes align-items-center margin-align-center" style="position: relative;left: -5%;">
             <div>
               <div class="animated-layer fade-in-down-animation fadeInUp wow">
                 <i class="fa fa-phone"></i>
@@ -957,6 +998,7 @@
   </div>
   <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
   <script src="assets/plugin/jquery/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/plugin/jquery-mousewheel/jquery.mousewheel.min.js"></script>
   <script src="assets/plugin/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
   <script src="js/script.js"></script>
