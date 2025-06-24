@@ -110,6 +110,9 @@ ul {
 }
 
 .margin-align-center {margin: 0 auto;}
+.btn-devsiddhi {background-color: #b68843;border-color: #8f672b;}
+.btn-devsiddhi:hover {background-color: #8f672b;border-color: #b68843;}
+.btn-devsiddhi:focus-visible, .btn-devsiddhi:active {color: #f1cf9b !important;background-color: #b68843 !important;border-color: #8f672b !important;outline: 0;box-shadow: 0px 0px 0px 4px #c9a46c;}
 
 /*** Preloader ***/
 
@@ -1216,53 +1219,25 @@ video {
 }
 
 /*** CONTACT SECTION ***/
-
-.contact {display: flex;align-items: center;position: relative;z-index: 1;padding-right: 20px;width: 100vw;min-width: 100vw;background-color: #f5f5f5;}
-
-.contact .boxes {
-  display: flex;
-  margin-top: 18px;
-}
-
-.contact .boxes > div:not(:first-child) {
-  margin-left: 75px;
-}
-
+.contact {display: flex;align-items: center;position: relative;z-index: 1;padding-right: 20px;wi-dth: 100vw;min-width: 100vw;background-color: #f5f5f5;}
+.contact .hori-flex-column {position: relative;display: flex;align-items: center;height: 100%;min-width: 100vw;}
+.contact .boxes {display: flex;margin-top: 18px;margin-right: 50px;margin-left: 50px;}
+.contact .boxes > div:not(:first-child) {margin-left: 75px;}
 .contact .boxes > div > div {display: flex;align-items: center;flex-direction: column;text-align: center;padding: 60px 20px 30px 20px;border-radius: 20px;position: relative;min-width: 430px;max-width: 430px;min-height: 182px;background-color: rgb(219 219 219 / 83%);border: 1px solid #bfbfbf;}
-
-.contact .boxes > div > div:not(:last-child) {
-  margin-bottom: 70px;
-}
-
+.contact .boxes > div > div:not(:last-child) {margin-bottom: 70px;}
 .contact .boxes > div > div > i {text-align: center;border-radius: 50%;font-size: 25px;display: flex;align-items: center;justify-content: center;position: absolute;top: -37px;width: 74px;height: 74px;background: #bdbdbd;border: 3px solid #bdbdbd;color: #b68843 !important;}
-
 .contact .boxes > div > div p {margin: 0;font-weight: 500;font-size: 20px;color: #212529;}
-.contact .boxes > div > div p a {
-  /* iOS fixes*/
-  text-decoration: none !important;
-  color: #fff !important;
-}
-
-.contact .boxes > div > div span.small-text {
-  color: #1c1c1c;
-  display: block;
-  text-transform: capitalize;
-  font-weight: 400;
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-
-.contact .boxes .social {
-  display: flex;
-  margin-top: 3px;
-}
-
+.contact .boxes > div > div p a {/* iOS fixes*/text-decoration: none !important;color: #fff !important;}
+.contact .boxes > div > div span.small-text {color: #1c1c1c;display: block;text-transform: capitalize;font-weight: 400;margin-bottom: 5px;font-size: 18px;}
+.contact .boxes .social {display: flex;margin-top: 3px;}
 .contact .boxes .social li a {width: 30px;height: 30px;color: #212529;margin: 0 10px;transition: 0.3s;}
 .contact .boxes .social li a:hover {color: #b68843;}
-
-.contact .separator {
-  transform: translateX(calc(100% + 150px));
-}
+.contact .separator {transform: translateX(calc(100% + 150px));}
+.content-form {padding-left: 5rem;padding-right: 5rem;width: 50vw;}
+.content-form .form-body {width: 500px;padding: 20px !important;min-width: auto !important;max-width: none !important;min-height: auto !important;text-align: left !important;border-radius: 15px !important;}
+.content-form .form-body form {width: 100%;}
+.content-form>h3 {font-weight: 600;}
+.content-form>p {font-weight: 600;color: #b68843;}
 
 /*** CLIENTS SECTION ***/
 
